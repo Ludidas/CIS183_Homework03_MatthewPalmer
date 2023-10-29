@@ -1,3 +1,9 @@
+//===================================
+//Name: Matthew Palmer
+//Date: 10/29/2023
+//Desc: Full CRUD Admin App
+//===================================
+
 package com.example.homework03_program01;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
 
     ArrayList<Users> userList;
     ArrayList<String> usernames;
-    //ArrayAdapter<String> adapter;
     UserListAdapter adapter;
     Intent addUserIntent;
     Intent userInfoIntent;
@@ -53,10 +58,6 @@ public class MainActivity extends AppCompatActivity {
 
         //get all of the usernames from our table
         usernames = dbHelper.getAllUsernames();
-
-        //Remember that this is a simple menu.  Meaning that you can only display one string per cell
-        //If you want to display multiple things in a cell you need to make a custom adapter and custom cell.
-        //adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, usernames);
 
 
         addUserIntent = new Intent(MainActivity.this, AddUser.class);
